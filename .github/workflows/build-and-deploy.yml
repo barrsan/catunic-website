@@ -10,6 +10,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    
+    environment: 
+      name: prod
 
     steps:
       - name: Checkout 🛎️
@@ -23,13 +26,6 @@ jobs:
 
       - name: Install dependencies 📦
         run: npm ci
-      
-      - name: Сreate .env file 📄
-        run: |
-          touch .env
-          echo SITE_URL=${{ env.SITE_URL }} >> .env
-        env:
-          SITE_URL: ${{ env.SITE_URL }}
       
       - name: Build project 🛠️
         run: |
