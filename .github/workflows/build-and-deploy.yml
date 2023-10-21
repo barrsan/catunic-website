@@ -25,13 +25,13 @@ jobs:
         run: npm ci
 
       - name: Build project 🛠️
-        run: npm run build
+        run: |
+          npm run build
+          touch out/.nojekyll
+          mv out/404/index.html out/404.html
         env:
           SITE_URL: ${{ env.SITE_URL }}
       
-      - name: Create .nojekyll file 📄
-        run: touch out/.nojekyll
-
       - name: Deploy project 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
