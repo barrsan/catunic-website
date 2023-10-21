@@ -23,14 +23,20 @@ jobs:
 
       - name: Install dependencies 📦
         run: npm ci
-
+      
+      - name: Сreate .env file 📄
+        run: |
+          touch .env
+          echo SITE_URL=${{ env.SITE_URL }} >> .env
+        env:
+          SITE_URL: ${{ env.SITE_URL }}
+      
       - name: Build project 🛠️
         run: |
           npm run build
           touch out/.nojekyll
           mv out/404/index.html out/404.html
-        env:
-          SITE_URL: ${{ env.SITE_URL }}
+          mv out/500/index.html out/500.html
       
       - name: Deploy project 🚀
         uses: JamesIves/github-pages-deploy-action@v4
