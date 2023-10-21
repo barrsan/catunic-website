@@ -28,6 +28,9 @@ jobs:
         run: npm run build
         env:
           SITE_URL: ${{ env.SITE_URL }}
+      
+      - name: Create .nojekyll file 📄
+        run: touch out/.nojekyll
 
       - name: Deploy project 🚀
         uses: JamesIves/github-pages-deploy-action@v4
