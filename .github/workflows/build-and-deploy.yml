@@ -1,0 +1,36 @@
+name: Build and Deploy
+
+on:
+  workflow_dispatch:
+  
+  repository_dispatch:
+    types:
+      - build_and_deploy
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+
+      - name: Use Node.js 🟢 
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: 'npm'
+
+      - name: Install dependencies 📦
+        run: npm ci
+
+      - name: Build project 🛠️
+        run: npm run build
+
+      - name: Deploy project 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: out
+          token: ${{ secrets.CATUNIC_GITHUB_TOKEN }}
+          repository-name: Catunic/catunic.github.io
