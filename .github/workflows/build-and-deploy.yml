@@ -28,6 +28,7 @@ jobs:
       
       - name: Build project 🛠️
         run: |
+          echo "Print - <$SITE_URL>"
           npm run build
           touch out/.nojekyll
           mv out/404/index.html out/404.html
