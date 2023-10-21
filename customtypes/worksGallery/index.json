@@ -1,0 +1,33 @@
+{
+  "id": "worksGallery",
+  "label": "Works gallery",
+  "format": "custom",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "config": {
+          "label": "UID"
+        },
+        "type": "UID"
+      },
+      "images": {
+        "type": "Group",
+        "config": {
+          "label": "Images",
+          "fields": {
+            "image": {
+              "type": "Image",
+              "config": {
+                "label": "Image",
+                "constraint": {},
+                "thumbnails": []
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

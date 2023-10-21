@@ -1,0 +1,35 @@
+{
+  "Common": {
+    "siteName": "Catunic",
+    "copyright": "© {year} All rights reserved.",
+    "socials": "Socials",
+    "viewCase": "View case",
+    "viewProject": "View project",
+    "mouseFollower": {
+      "view": "View",
+      "drag": "Drag"
+    },
+    "allCases": "All cases",
+    "nextCase": "Next case",
+    "pageErrorMessages": {
+      "404": "Oh no!\n Just like the unicorn,\n the page you are looking for\n does not exist.",
+      "500": "Something wrong,\n the unicorn already deals\n with this problem."
+    },
+    "backToReality": "Back to reality",
+    "tryAgain": "Try again",
+    "hero": {
+      "greet": {
+        "1": "Hey",
+        "2": "there!"
+      },
+      "title": {
+        "1": "I'm",
+        "2": "Catrina"
+      },
+      "tagline": {
+        "pain": "<taglineLight>Is your design a</taglineLight> pain?",
+        "cure": "<taglineLight>I'm a unique</taglineLight> cure!"
+      }
+    }
+  }
+}

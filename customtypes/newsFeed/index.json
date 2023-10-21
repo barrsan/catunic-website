@@ -1,0 +1,29 @@
+{
+  "id": "newsFeed",
+  "label": "News feed",
+  "format": "custom",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "news": {
+        "type": "Group",
+        "config": {
+          "label": "News",
+          "fields": {
+            "newsItem": {
+              "type": "Link",
+              "config": {
+                "label": "News item",
+                "select": "document",
+                "customtypes": [
+                  "newsPost"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "won",
+				"type": "Text"
+			},
+			"spacingTop": {
+				"__TYPE__": "FieldContent",
+				"value": "3",
+				"type": "Select"
+			},
+			"spacingBottom": {
+				"__TYPE__": "FieldContent",
+				"value": "3",
+				"type": "Select"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"projectName",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "detail",
+							"type": "Text"
+						}
+					],
+					[
+						"projectLink",
+						{
+							"__TYPE__": "LinkContent",
+							"value": {
+								"__TYPE__": "ExternalLink",
+								"url": "http://twitter.com"
+							}
+						}
+					],
+					[
+						"projectDescription",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Proident nostrud minim excepteur esse voluptate est proident irure elit et velit. Veniam nostrud laborum quis sint pariatur dolore. Reprehenderit duis ad nostrud sit ex ea ea."
+									}
+								}
+							]
+						}
+					]
+				]
+			}
+		]
+	}
+]

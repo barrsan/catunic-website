@@ -1,0 +1,1 @@
+export { PreventScrollRestorationScript } from './PreventScrollRestorationScript';

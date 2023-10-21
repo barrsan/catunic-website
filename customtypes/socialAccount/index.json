@@ -1,0 +1,56 @@
+{
+  "id": "socialAccount",
+  "label": "Social account",
+  "format": "custom",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "config": {
+          "label": "UID"
+        },
+        "type": "UID"
+      },
+      "serviceName": {
+        "type": "Text",
+        "config": {
+          "label": "Service name",
+          "placeholder": ""
+        }
+      },
+      "name": {
+        "type": "Text",
+        "config": {
+          "label": "Name",
+          "placeholder": ""
+        }
+      },
+      "url": {
+        "type": "Link",
+        "config": {
+          "label": "Url",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "select": null
+        }
+      },
+      "type": {
+        "type": "Select",
+        "config": {
+          "label": "Type",
+          "placeholder": "",
+          "options": [
+            "telegram",
+            "instagram",
+            "dribbble",
+            "behance",
+            "linkedIn",
+            "twitter"
+          ],
+          "default_value": "telegram"
+        }
+      }
+    }
+  }
+}

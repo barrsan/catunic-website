@@ -1,0 +1,29 @@
+{
+  "id": "works_gallery_block",
+  "type": "SharedSlice",
+  "name": "WorksGallery",
+  "description": "WorksGalleryBlock",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "gallery": {
+          "type": "Link",
+          "config": {
+            "label": "Gallery",
+            "select": "document",
+            "customtypes": [
+              "worksGallery"
+            ]
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "id": "hero_block",
+  "type": "SharedSlice",
+  "name": "Hero",
+  "description": "HeroBlock",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "frontSideImage": {
+          "type": "Image",
+          "config": {
+            "label": "Front-side image",
+            "constraint": {
+              "width": 1620,
+              "height": 1820
+            },
+            "thumbnails": []
+          }
+        },
+        "backSideImage": {
+          "type": "Image",
+          "config": {
+            "label": "Back-side image",
+            "constraint": {
+              "height": 1820,
+              "width": 1620
+            },
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

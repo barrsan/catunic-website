@@ -1,0 +1,71 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"spacingTop": {
+				"__TYPE__": "FieldContent",
+				"value": "0",
+				"type": "Select"
+			},
+			"spacingBottom": {
+				"__TYPE__": "FieldContent",
+				"value": "2",
+				"type": "Select"
+			},
+			"doubleMarquee": {
+				"__TYPE__": "BooleanContent",
+				"value": false
+			},
+			"speedMain": {
+				"__TYPE__": "FieldContent",
+				"value": "72",
+				"type": "Number"
+			},
+			"speedSecondary": {
+				"__TYPE__": "FieldContent",
+				"value": "44",
+				"type": "Number"
+			},
+			"startOffsetMain": {
+				"__TYPE__": "FieldContent",
+				"value": "38",
+				"type": "Number"
+			},
+			"startOffsetSecondary": {
+				"__TYPE__": "FieldContent",
+				"value": "25",
+				"type": "Number"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"textItem",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Culpa quis ea dolore laboris sunt. Ullamco sint et do occaecat consequat Lorem."
+									}
+								}
+							]
+						}
+					],
+					[
+						"divider",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "leather",
+							"type": "Text"
+						}
+					]
+				]
+			}
+		]
+	}
+]

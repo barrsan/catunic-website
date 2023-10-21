@@ -1,0 +1,72 @@
+{
+  "id": "recent_cases_block",
+  "type": "SharedSlice",
+  "name": "RecentCases",
+  "description": "RecentCasesBlock",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "description": {
+          "type": "Text",
+          "config": {
+            "label": "Description",
+            "placeholder": ""
+          }
+        },
+        "spacingTop": {
+          "type": "Select",
+          "config": {
+            "label": "Spacing top",
+            "placeholder": "",
+            "options": [
+              "0",
+              "1",
+              "2",
+              "3"
+            ],
+            "default_value": "0"
+          }
+        },
+        "spacingBottom": {
+          "type": "Select",
+          "config": {
+            "label": "Spacing bottom",
+            "placeholder": "",
+            "options": [
+              "0",
+              "1",
+              "2",
+              "3"
+            ],
+            "default_value": "0"
+          }
+        }
+      },
+      "items": {
+        "case": {
+          "type": "Link",
+          "config": {
+            "label": "Case",
+            "select": "document",
+            "customtypes": [
+              "case"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "id": "siteNavigation",
+  "label": "Site navigation",
+  "format": "custom",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "navLinks": {
+        "type": "Group",
+        "config": {
+          "label": "Nav links",
+          "fields": {
+            "name": {
+              "type": "Text",
+              "config": {
+                "label": "Name",
+                "placeholder": ""
+              }
+            },
+            "alias": {
+              "type": "Text",
+              "config": {
+                "label": "Alias",
+                "placeholder": ""
+              }
+            },
+            "href": {
+              "type": "Link",
+              "config": {
+                "label": "Href",
+                "placeholder": "",
+                "allowTargetBlank": false,
+                "select": null
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

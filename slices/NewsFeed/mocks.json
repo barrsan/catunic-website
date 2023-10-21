@@ -1,0 +1,36 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"newsFeed": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "DocumentLink",
+					"id": "mock_document_id"
+				}
+			},
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "brush",
+				"type": "Text"
+			},
+			"spacingTop": {
+				"__TYPE__": "FieldContent",
+				"value": "0",
+				"type": "Select"
+			},
+			"spacingBottom": {
+				"__TYPE__": "FieldContent",
+				"value": "0",
+				"type": "Select"
+			},
+			"containerSize": {
+				"__TYPE__": "FieldContent",
+				"value": "1",
+				"type": "Select"
+			}
+		},
+		"items": []
+	}
+]

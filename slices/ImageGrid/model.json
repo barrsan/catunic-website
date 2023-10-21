@@ -1,0 +1,110 @@
+{
+  "id": "image_grid_block",
+  "type": "SharedSlice",
+  "name": "ImageGrid",
+  "description": "ImageGridBlock",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "spacingTop": {
+          "type": "Select",
+          "config": {
+            "label": "Spacing top",
+            "placeholder": "",
+            "options": [
+              "0",
+              "1",
+              "2",
+              "3"
+            ],
+            "default_value": "0"
+          }
+        },
+        "spacingBottom": {
+          "type": "Select",
+          "config": {
+            "label": "Spacing bottom",
+            "placeholder": "",
+            "options": [
+              "0",
+              "1",
+              "2",
+              "3"
+            ],
+            "default_value": "0"
+          }
+        },
+        "size": {
+          "type": "Select",
+          "config": {
+            "label": "Size",
+            "placeholder": "",
+            "options": [
+              "1",
+              "2"
+            ],
+            "default_value": "1"
+          }
+        }
+      },
+      "items": {
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "caption": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Caption",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong,em,hyperlink,heading4,heading5,heading6,list-item"
+          }
+        },
+        "captionAlign": {
+          "type": "Select",
+          "config": {
+            "label": "Caption align",
+            "placeholder": "",
+            "options": [
+              "left",
+              "center"
+            ],
+            "default_value": "left"
+          }
+        },
+        "parallaxMode": {
+          "type": "Boolean",
+          "config": {
+            "label": "Parallax mode",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": true
+          }
+        },
+        "displayMode": {
+          "type": "Select",
+          "config": {
+            "label": "Display mode",
+            "placeholder": "",
+            "options": [
+              "auto",
+              "square"
+            ],
+            "default_value": "auto"
+          }
+        }
+      }
+    }
+  ]
+}

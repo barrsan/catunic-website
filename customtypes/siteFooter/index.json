@@ -1,0 +1,53 @@
+{
+  "id": "siteFooter",
+  "label": "Site footer",
+  "format": "custom",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "ctaRow1": {
+        "type": "Text",
+        "config": {
+          "label": "CTA row 1",
+          "placeholder": ""
+        }
+      },
+      "ctaRow2": {
+        "type": "Text",
+        "config": {
+          "label": "CTA row 2",
+          "placeholder": ""
+        }
+      },
+      "ctaButtonText": {
+        "type": "Text",
+        "config": {
+          "label": "CTA Button text",
+          "placeholder": ""
+        }
+      },
+      "ctaButtonFontSize": {
+        "type": "Number",
+        "config": {
+          "label": "CTA Button font size",
+          "placeholder": ""
+        }
+      },
+      "ctaButtonFontSizeSafari": {
+        "type": "Number",
+        "config": {
+          "label": "CTA Button font size (Safari)",
+          "placeholder": ""
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {}
+        }
+      }
+    }
+  }
+}

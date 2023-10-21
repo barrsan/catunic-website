@@ -1,0 +1,62 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"image": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1551739440-5dd934d3a94a",
+					"width": 3456,
+					"height": 4320
+				},
+				"url": "https://images.unsplash.com/photo-1551739440-5dd934d3a94a",
+				"width": 3456,
+				"height": 4320,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"caption": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Dolor irure elit tempor ex duis. Est labore dolore eu reprehenderit minim labore et eu sint quis est."
+						}
+					}
+				]
+			},
+			"parallaxMode": {
+				"__TYPE__": "BooleanContent",
+				"value": false
+			},
+			"spacingTop": {
+				"__TYPE__": "FieldContent",
+				"value": "1",
+				"type": "Select"
+			},
+			"spacingBottom": {
+				"__TYPE__": "FieldContent",
+				"value": "0",
+				"type": "Select"
+			},
+			"displayMode": {
+				"__TYPE__": "FieldContent",
+				"value": "auto",
+				"type": "Select"
+			}
+		},
+		"items": []
+	}
+]

@@ -1,0 +1,10 @@
+{
+  "repositoryName": "catunic",
+  "adapter": {
+    "resolve": "@slicemachine/adapter-next",
+    "options": {
+      "format": false
+    }
+  },
+  "libraries": ["./slices"]
+}

@@ -1,0 +1,34 @@
+{
+  "id": "contacts_block",
+  "type": "SharedSlice",
+  "name": "Contacts",
+  "description": "ContactsBlock",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "avatar": {
+          "type": "Image",
+          "config": {
+            "label": "Avatar",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

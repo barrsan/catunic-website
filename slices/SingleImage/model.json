@@ -1,0 +1,86 @@
+{
+  "id": "single_image_block",
+  "type": "SharedSlice",
+  "name": "SingleImage",
+  "description": "SingleImageBlock",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "caption": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Caption",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "displayMode": {
+          "type": "Select",
+          "config": {
+            "label": "Display mode",
+            "placeholder": "",
+            "options": [
+              "auto",
+              "square",
+              "cover"
+            ],
+            "default_value": "auto"
+          }
+        },
+        "parallaxMode": {
+          "type": "Boolean",
+          "config": {
+            "label": "Parallax mode",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": true
+          }
+        },
+        "spacingTop": {
+          "type": "Select",
+          "config": {
+            "label": "Spacing top",
+            "placeholder": "",
+            "options": [
+              "0",
+              "1",
+              "2",
+              "3"
+            ],
+            "default_value": "0"
+          }
+        },
+        "spacingBottom": {
+          "type": "Select",
+          "config": {
+            "label": "Spacing bottom",
+            "placeholder": "",
+            "options": [
+              "0",
+              "1",
+              "2",
+              "3"
+            ],
+            "default_value": "0"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "id": "intro_text_block",
+  "type": "SharedSlice",
+  "name": "IntroText",
+  "description": "IntroTextBlock",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading2,heading3,heading4,heading5,heading6"
+          }
+        },
+        "titleSize": {
+          "type": "Select",
+          "config": {
+            "label": "Title size",
+            "placeholder": "",
+            "options": [
+              "2",
+              "3",
+              "4",
+              "5",
+              "6"
+            ],
+            "default_value": "2"
+          }
+        },
+        "text": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Text",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "strong,em,hyperlink,o-list-item,list-item,paragraph"
+          }
+        },
+        "largeText": {
+          "type": "Boolean",
+          "config": {
+            "label": "Large text",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": true
+          }
+        },
+        "spacingTop": {
+          "type": "Select",
+          "config": {
+            "label": "Spacing top",
+            "placeholder": "",
+            "options": [
+              "0",
+              "1",
+              "2",
+              "3"
+            ],
+            "default_value": "0"
+          }
+        },
+        "spacingBottom": {
+          "type": "Select",
+          "config": {
+            "label": "Spacing bottom",
+            "placeholder": "",
+            "options": [
+              "0",
+              "1",
+              "2",
+              "3"
+            ],
+            "default_value": "0"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

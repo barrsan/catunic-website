@@ -1,0 +1,1 @@
+export { RecentCasesSection } from './RecentCasesSection';

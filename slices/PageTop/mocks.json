@@ -1,0 +1,14 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"icon": {
+				"__TYPE__": "FieldContent",
+				"value": "none",
+				"type": "Select"
+			}
+		},
+		"items": []
+	}
+]

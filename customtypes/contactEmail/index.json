@@ -1,0 +1,18 @@
+{
+  "id": "contactEmail",
+  "label": "Contact email",
+  "format": "custom",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "contactEmail": {
+        "type": "Text",
+        "config": {
+          "label": "Email address",
+          "placeholder": ""
+        }
+      }
+    }
+  }
+}

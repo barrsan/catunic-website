@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base, lenis, other;
+
+@layer base {
+  html {
+    @apply text-ds-grey-900 text-base-sm 2xs:text-base;
+  }
+
+  body {
+    @apply relative overscroll-x-none overflow-x-hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  main {
+    @apply relative bg-white;
+  }
+
+  ::selection {
+    @apply text-ds-grey-900 bg-ds-green;
+  }
+}
+
+@layer lenis {
+  html.lenis {
+    @apply h-auto;
+  }
+  
+  .lenis.lenis-smooth {
+    @apply scroll-auto;
+  }
+  
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    @apply overscroll-contain;
+  }
+  
+  .lenis.lenis-stopped {
+    @apply overflow-hidden;
+  }
+  
+  .lenis.lenis-scrolling iframe {
+    @apply pointer-events-none;
+  }
+}
+
+@layer other {
+  #prismic-toolbar-v2 {
+    display: none !important;
+  }
+}

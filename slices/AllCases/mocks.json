@@ -1,0 +1,19 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"spacingTop": {
+				"__TYPE__": "FieldContent",
+				"value": "1",
+				"type": "Select"
+			},
+			"spacingBottom": {
+				"__TYPE__": "FieldContent",
+				"value": "0",
+				"type": "Select"
+			}
+		},
+		"items": []
+	}
+]

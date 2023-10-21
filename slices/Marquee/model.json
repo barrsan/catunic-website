@@ -1,0 +1,101 @@
+{
+  "id": "marquee_block",
+  "type": "SharedSlice",
+  "name": "Marquee",
+  "description": "MarqueeBlock",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "spacingTop": {
+          "type": "Select",
+          "config": {
+            "label": "Spacing top",
+            "placeholder": "",
+            "options": [
+              "0",
+              "1",
+              "2",
+              "3"
+            ],
+            "default_value": "0"
+          }
+        },
+        "spacingBottom": {
+          "type": "Select",
+          "config": {
+            "label": "Spacing bottom",
+            "placeholder": "",
+            "options": [
+              "0",
+              "1",
+              "2",
+              "3"
+            ],
+            "default_value": "0"
+          }
+        },
+        "doubleMarquee": {
+          "type": "Boolean",
+          "config": {
+            "label": "Double marquee",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": false
+          }
+        },
+        "speedMain": {
+          "type": "Number",
+          "config": {
+            "label": "Speed (main)",
+            "placeholder": ""
+          }
+        },
+        "speedSecondary": {
+          "type": "Number",
+          "config": {
+            "label": "Speed (secondary)",
+            "placeholder": ""
+          }
+        },
+        "startOffsetMain": {
+          "type": "Number",
+          "config": {
+            "label": "Start offset (main)",
+            "placeholder": ""
+          }
+        },
+        "startOffsetSecondary": {
+          "type": "Number",
+          "config": {
+            "label": "Start offset (secondary)",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {
+        "textItem": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Text item",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "single": "strong,em"
+          }
+        },
+        "divider": {
+          "type": "Text",
+          "config": {
+            "label": "Divider",
+            "placeholder": ""
+          }
+        }
+      }
+    }
+  ]
+}

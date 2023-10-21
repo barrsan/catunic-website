@@ -1,0 +1,1 @@
+export { fetchCommonPageData } from './page';

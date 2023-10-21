@@ -1,0 +1,1 @@
+export { MarqueeSection } from './MarqueeSection';

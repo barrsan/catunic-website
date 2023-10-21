@@ -1,0 +1,73 @@
+{
+  "id": "newsPost",
+  "label": "News post",
+  "format": "custom",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "config": {
+          "label": "UID"
+        },
+        "type": "UID"
+      },
+      "title": {
+        "type": "Text",
+        "config": {
+          "label": "Title",
+          "placeholder": ""
+        }
+      },
+      "image": {
+        "type": "Image",
+        "config": {
+          "label": "Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "sourceLink": {
+        "type": "Link",
+        "config": {
+          "label": "Source link",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "select": null
+        }
+      },
+      "sourceName": {
+        "type": "Text",
+        "config": {
+          "label": "Source name",
+          "placeholder": ""
+        }
+      },
+      "sourceType": {
+        "type": "Select",
+        "config": {
+          "label": "Source type",
+          "placeholder": "",
+          "options": [
+            "telegram",
+            "instagram",
+            "dribbble",
+            "behance",
+            "other"
+          ],
+          "default_value": "telegram"
+        }
+      },
+      "socialAccount": {
+        "type": "Link",
+        "config": {
+          "label": "Social account",
+          "select": "document",
+          "customtypes": [
+            "socialAccount"
+          ]
+        }
+      }
+    }
+  }
+}

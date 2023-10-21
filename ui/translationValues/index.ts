@@ -1,0 +1,1 @@
+export { LightTaglineText } from './LightTaglineText';

@@ -1,0 +1,104 @@
+{
+  "id": "about",
+  "label": "About",
+  "format": "page",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "Slug",
+          "placeholder": ""
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "page_top_block": {
+              "type": "SharedSlice"
+            },
+            "experience_block": {
+              "type": "SharedSlice"
+            },
+            "intro_text_block": {
+              "type": "SharedSlice"
+            },
+            "image_grid_block": {
+              "type": "SharedSlice"
+            },
+            "single_image_block": {
+              "type": "SharedSlice"
+            },
+            "works_gallery_block": {
+              "type": "SharedSlice"
+            },
+            "news_feed_block": {
+              "type": "SharedSlice"
+            },
+            "marquee_block": {
+              "type": "SharedSlice"
+            },
+            "basic_text_block": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    },
+    "SEO & Metadata": {
+      "seoTitle": {
+        "config": {
+          "label": "SEO Title",
+          "placeholder": "A title of the page used for social media and search engines"
+        },
+        "type": "Text"
+      },
+      "seoDescription": {
+        "config": {
+          "label": "SEO Description",
+          "placeholder": "A brief summary of the page"
+        },
+        "type": "Text"
+      },
+      "ogImage": {
+        "config": {
+          "label": "OG Image",
+          "constraint": {
+            "height": 630,
+            "width": 1200
+          },
+          "thumbnails": []
+        },
+        "type": "Image"
+      },
+      "ogTitle": {
+        "type": "Text",
+        "config": {
+          "label": "OG Title",
+          "placeholder": ""
+        }
+      },
+      "ogDescription": {
+        "type": "Text",
+        "config": {
+          "label": "OG Description",
+          "placeholder": ""
+        }
+      },
+      "twitterAccount": {
+        "type": "Link",
+        "config": {
+          "label": "Twitter account",
+          "select": "document",
+          "customtypes": [
+            "socialAccount"
+          ]
+        }
+      }
+    }
+  }
+}

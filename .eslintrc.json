@@ -1,0 +1,27 @@
+{
+  "extends": ["airbnb", "airbnb-typescript", "next", "prettier"],
+  "parser": "@typescript-eslint/parser",
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "parserOptions": {
+        "project": ["./tsconfig.json"]
+      }
+    }
+  ],
+  "rules": {
+    "import/no-extraneous-dependencies": [
+      "error", {
+        "devDependencies": true, 
+        "optionalDependencies": false, 
+        "peerDependencies": false, 
+        "packageDir": "./"
+      }
+    ],
+    "react/prop-types": 0,
+    "react/require-default-props": 0,
+    "react/jsx-props-no-spreading": 0,
+    "import/prefer-default-export": 0,
+    "import/extensions": 0
+  }
+}

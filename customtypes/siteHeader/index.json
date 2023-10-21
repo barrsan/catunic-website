@@ -1,0 +1,25 @@
+{
+  "id": "siteHeader",
+  "label": "Site header",
+  "format": "custom",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "leftText": {
+        "type": "Text",
+        "config": {
+          "label": "Left text",
+          "placeholder": ""
+        }
+      },
+      "rightText": {
+        "type": "Text",
+        "config": {
+          "label": "Right text",
+          "placeholder": ""
+        }
+      }
+    }
+  }
+}

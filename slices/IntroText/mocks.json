@@ -1,0 +1,50 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Adjective"
+						}
+					}
+				]
+			},
+			"titleSize": {
+				"__TYPE__": "FieldContent",
+				"value": "2",
+				"type": "Select"
+			},
+			"text": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Lorem laboris Lorem quis ipsum aliqua duis ipsum pariatur. Veniam eiusmod consectetur pariatur officia id culpa tempor ea ex deserunt ad ea."
+						}
+					}
+				]
+			},
+			"largeText": {
+				"__TYPE__": "BooleanContent",
+				"value": false
+			},
+			"spacingTop": {
+				"__TYPE__": "FieldContent",
+				"value": "0",
+				"type": "Select"
+			},
+			"spacingBottom": {
+				"__TYPE__": "FieldContent",
+				"value": "3",
+				"type": "Select"
+			}
+		},
+		"items": []
+	}
+]

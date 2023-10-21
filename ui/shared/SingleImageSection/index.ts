@@ -1,0 +1,1 @@
+export { SingleImageSection } from './SingleImageSection';

@@ -1,0 +1,38 @@
+{
+  "id": "socialLinks",
+  "label": "Social links",
+  "format": "custom",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "socialLinks": {
+        "type": "Group",
+        "config": {
+          "label": "Social links",
+          "fields": {
+            "socialAccount": {
+              "type": "Link",
+              "config": {
+                "label": "Social account",
+                "select": "document",
+                "customtypes": [
+                  "socialAccount"
+                ]
+              }
+            },
+            "enabled": {
+              "type": "Boolean",
+              "config": {
+                "label": "Enabled",
+                "placeholder_false": "false",
+                "placeholder_true": "true",
+                "default_value": true
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
