@@ -28,14 +28,12 @@ jobs:
       
       - name: Build project 🛠️
         run: |
-          echo "Print - <$SITE_URL> - <$SITE_URL2>"
           npm run build
           touch out/.nojekyll
           mv out/404/index.html out/404.html
           mv out/500/index.html out/500.html
         env:
           SITE_URL: ${{ vars.SITE_URL  }}
-          SITE_URL2: ${{ env.SITE_URL  }}
       
       - name: Deploy project 🚀
         uses: JamesIves/github-pages-deploy-action@v4
