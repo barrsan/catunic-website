@@ -24,9 +24,17 @@ type Props = PropsWithChildren<{
 const DURATION_SECONDS = 1;
 const DISABLE_FIXED_DURATION_SECONDS = 0.1;
 
+const CONTENT_DURATION_SECONDS = 0.5;
+const CONTENT_DELAY_SECONDS = 0.3;
+
 const transition = {
   duration: DURATION_SECONDS,
   ease: cubicBezierEasing.MAIN,
+};
+
+const contentTransition = {
+  duration: CONTENT_DURATION_SECONDS,
+  delay: CONTENT_DELAY_SECONDS,
 };
 
 const rootMotionVariants = {
@@ -37,6 +45,14 @@ const rootMotionVariants = {
 
 const contentWrapperMotionVariants = {
   exit: { x: '60%', transition },
+};
+
+const contentMotionVariants = {
+  initial: { opacity: 0 },
+  animate: {
+    opacity: 1,
+    transition: contentTransition,
+  },
 };
 
 const overlayMotionVariants = {
@@ -122,6 +138,7 @@ function PageTransition(
     <motion.div
       className={clsx([
         `page-key-${pageKey}`,
+        'bg-white',
         isFixed &&
           !isOutboundPage &&
           'fixed left-0 right-0 top-0 max-h-[120vh] w-full overflow-hidden',
@@ -137,7 +154,13 @@ function PageTransition(
         initial={false}
         exit="exit"
       >
-        {children}
+        <motion.div
+          variants={contentMotionVariants}
+          initial="initial"
+          animate="animate"
+        >
+          {children}
+        </motion.div>
       </motion.div>
       {!isPresence && (
         <motion.div
