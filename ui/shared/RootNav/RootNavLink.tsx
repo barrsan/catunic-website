@@ -3,6 +3,8 @@ import Link from 'next/link';
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
 
+import { usePageTransition } from '@/store/pageTransition';
+
 import BagIcon from '@/ui/svg/BagIcon.svg';
 import HomeIcon from '@/ui/svg/HomeIcon.svg';
 import PaperPlaneIcon from '@/ui/svg/PaperPlaneIcon.svg';
@@ -31,15 +33,22 @@ function getIconComponent(name: StaticPageAlias) {
 function RootNavLink({ name, href, isActive, alias }: Props) {
   const Icon = getIconComponent(alias);
 
+  const { isPageTransition } = usePageTransition();
+
   return (
     <Link
-      className={clsx([
-        'group',
-        'relative block rounded-main md:px-6 md:py-2.5',
-        'text-base',
-        'transition-colors delay-200 duration-700',
-        isActive ? 'text-ds-grey-900' : 'text-white',
-      ])}
+      className={clsx(
+        [
+          'group',
+          'relative block rounded-main md:px-6 md:py-2.5',
+          'text-base',
+          'transition-colors delay-200 duration-700',
+          isActive ? 'text-ds-grey-900' : 'text-white',
+        ],
+        {
+          'pointer-events-none': isPageTransition,
+        },
+      )}
       href={href}
       scroll={false}
     >
