@@ -71,6 +71,7 @@ function PageTransition(
   const {
     isPageTransition,
     outboundPageKey,
+    currentPageKey,
     setPageTransition,
     setOutboundPageKey,
   } = usePageTransition();
@@ -85,12 +86,28 @@ function PageTransition(
       setPageTransition(true);
     };
 
+    const handleChangeComplete = () => {
+      if (currentPageKey === outboundPageKey) {
+        setPageTransition(false);
+      }
+    };
+
     router.events.on('routeChangeStart', handleChangeStart);
+    router.events.on('routeChangeComplete', handleChangeComplete);
 
     return () => {
       router.events.off('routeChangeStart', handleChangeStart);
+      router.events.off('routeChangeComplete', handleChangeComplete);
     };
-  }, [router, setOutboundPageKey, setPageTransition, pageKey]);
+  }, [
+    router,
+    isPageTransition,
+    setOutboundPageKey,
+    setPageTransition,
+    pageKey,
+    outboundPageKey,
+    currentPageKey,
+  ]);
 
   useEffect(() => {
     let timeout: Timeout = null;

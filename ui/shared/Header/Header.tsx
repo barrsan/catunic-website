@@ -4,6 +4,7 @@ import clsx from 'clsx';
 import { useTranslations } from 'next-intl';
 
 import { HeaderTheme, useHeaderTheme } from '@/store/header';
+import { usePageTransition } from '@/store/pageTransition';
 
 import { Container } from '@/ui/shared/Container';
 import LogoIcon from '@/ui/svg/LogoIcon.svg';
@@ -35,6 +36,7 @@ export function Header({ data }: Props) {
 
   const { headerTheme } = useHeaderTheme();
   const { isVisible } = useHeaderVisibility();
+  const { isPageTransition } = usePageTransition();
 
   return (
     <header
@@ -74,7 +76,12 @@ export function Header({ data }: Props) {
             })}
           >
             <div className="flex items-center justify-center">
-              <Link href="/">
+              <Link
+                className={clsx({
+                  'pointer-events-none': isPageTransition,
+                })}
+                href="/"
+              >
                 <span className="flex flex-row items-center justify-center">
                   <LogoIcon
                     className={clsx('h-8 w-8 fill-white md:h-10 md:w-10', {
