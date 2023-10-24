@@ -3,7 +3,6 @@ import { cva } from 'class-variance-authority';
 import clsx from 'clsx';
 import { useTranslations } from 'next-intl';
 
-import { HeaderTheme, useHeaderTheme } from '@/store/header';
 import { usePageTransition } from '@/store/pageTransition';
 
 import { Container } from '@/ui/shared/Container';
@@ -34,7 +33,6 @@ type Props = {
 export function Header({ data }: Props) {
   const t = useTranslations('Common');
 
-  const { headerTheme } = useHeaderTheme();
   const { isVisible } = useHeaderVisibility();
   const { isPageTransition } = usePageTransition();
 
@@ -43,7 +41,6 @@ export function Header({ data }: Props) {
       className={clsx(
         'fixed z-50 h-auto w-full py-6 text-white mix-blend-difference',
         {
-          'text-white': headerTheme === HeaderTheme.DARK,
           'translate-y-0': isVisible,
           'delay-1000 -translate-y-28': !isVisible,
         },
@@ -83,11 +80,7 @@ export function Header({ data }: Props) {
                 href="/"
               >
                 <span className="flex flex-row items-center justify-center">
-                  <LogoIcon
-                    className={clsx('h-8 w-8 fill-white md:h-10 md:w-10', {
-                      'fill-white': headerTheme === HeaderTheme.DARK,
-                    })}
-                  />
+                  <LogoIcon className="h-8 w-8 fill-white md:h-10 md:w-10" />
                   <span className="ml-2 text-primary font-extrabold text-white">
                     {t('siteName')}
                   </span>
