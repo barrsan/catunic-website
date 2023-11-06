@@ -1,12 +1,14 @@
-import { ReactNode } from 'react';
-import { PrismicRichText } from '@prismicio/react';
+import { ReactNode, useId } from 'react';
+// import { PrismicRichText } from '@prismicio/react';
 import { cva, VariantProps } from 'class-variance-authority';
 import clsx from 'clsx';
 
 import { withSectionParams } from '@/lib/hocs/withSectionParams';
+import { useAnimatedTextContent } from '@/lib/hooks/useAnimatedTextContent';
 
 import { Container } from '@/ui/shared/Container';
 import { BasicSectionProps, Section } from '@/ui/shared/Section';
+import { TextContent } from '@/ui/shared/TextContent';
 
 import { RichTextData } from '@/types';
 
@@ -57,11 +59,17 @@ function BasicTextSection({
   isLargeText,
   isAnimatedHeadings = true,
 }: Props) {
+  const uniqId = useId();
+  const { textContainerRef } = useAnimatedTextContent({
+    dataSelector: `[data-text-content="${uniqId}"]`,
+  });
+
   return (
     <Section spacingY={spacingY}>
       <Container size={2}>
         <div className="grid-cols-6 md:grid">
           <div
+            ref={textContainerRef}
             className={contentPosition({
               className: clsx([
                 'mx-auto',
@@ -70,9 +78,10 @@ function BasicTextSection({
               ]),
               position,
             })}
+            data-text-content={uniqId}
           >
-            <PrismicRichText
-              field={text}
+            <TextContent
+              text={text}
               components={createDefaultComponents(isAnimatedHeadings)}
             />
           </div>

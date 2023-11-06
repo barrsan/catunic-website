@@ -1,9 +1,12 @@
+import { useId } from 'react';
 import { PrismicRichText } from '@prismicio/react';
 
 import { withSectionParams } from '@/lib/hocs/withSectionParams';
+import { useAnimatedTextContent } from '@/lib/hooks/useAnimatedTextContent';
 
 import { Container } from '@/ui/shared/Container';
 import { BasicSectionProps, Section } from '@/ui/shared/Section';
+import { TextContent } from '@/ui/shared/TextContent';
 import { Title, TitleSize } from '@/ui/shared/Title';
 
 import { RichTextData } from '@/types';
@@ -14,6 +17,7 @@ type Props = BasicSectionProps<{
   titleSize: TitleSize;
   isLargeText: boolean;
 }>;
+
 function IntroTextSection({
   spacingY,
   title,
@@ -21,6 +25,11 @@ function IntroTextSection({
   text,
   isLargeText,
 }: Props) {
+  const uniqId = useId();
+  const { textContainerRef } = useAnimatedTextContent({
+    dataSelector: `[data-text-content="${uniqId}"]`,
+  });
+
   return (
     <Section spacingY={spacingY}>
       <Container
@@ -33,8 +42,12 @@ function IntroTextSection({
           </Title>
         </div>
         <div className="col-span-4 col-start-3">
-          <div className={isLargeText ? 'prose-lg' : 'prose'}>
-            <PrismicRichText field={text} />
+          <div
+            ref={textContainerRef}
+            className={isLargeText ? 'prose-lg' : 'prose'}
+            data-text-content={uniqId}
+          >
+            <TextContent text={text} />
           </div>
         </div>
       </Container>

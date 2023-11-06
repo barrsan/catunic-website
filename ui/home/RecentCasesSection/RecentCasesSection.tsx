@@ -1,10 +1,11 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useId, useState } from 'react';
 import { cva, VariantProps } from 'class-variance-authority';
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 
 import { withSectionParams } from '@/lib/hocs/withSectionParams';
+import { useAnimatedTextContent } from '@/lib/hooks/useAnimatedTextContent';
 
 import { Button } from '@/ui/shared/Button';
 import { CaseCard } from '@/ui/shared/CaseCard';
@@ -61,6 +62,12 @@ function RecentCasesSection({ spacingY, title, description, cases }: Props) {
 
   const t = useTranslations('Common');
 
+  const uniqId = useId();
+
+  const { textContainerRef } = useAnimatedTextContent({
+    defaultSelector: `[data-text-content="${uniqId}"]`,
+  });
+
   const handleButtonHover = useCallback((isActive: boolean) => {
     setIsShowUnicorn(isActive);
   }, []);
@@ -97,7 +104,13 @@ function RecentCasesSection({ spacingY, title, description, cases }: Props) {
         </div>
         <div className="relative w-full">
           <div className="left-[60%] top-0 mb-10 w-full md:absolute md:mb-0 md:w-[32%]">
-            <div className="text-primary md:text-primary-lg">{description}</div>
+            <div
+              ref={textContainerRef}
+              className="text-primary md:text-primary-lg"
+              data-text-content={uniqId}
+            >
+              {description}
+            </div>
           </div>
           <div
             className={clsx([
