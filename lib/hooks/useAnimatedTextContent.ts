@@ -49,7 +49,7 @@ export function useAnimatedTextContent({
         { y: [20, 0], opacity: 1 },
         {
           duration: 0.5,
-          delay: stagger(0.1),
+          delay: stagger(0.08),
         },
       );
     }
