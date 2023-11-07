@@ -30,7 +30,8 @@ export function ExperienceProject({ name, description, link }: Props) {
     offsetEnd: 'bottom top',
   });
 
-  const y = useTransform(scrollYProgress, [0, 0.3], ['30%', '0%']);
+  const y = useTransform(scrollYProgress, [0, 0.5], ['30%', '0%']);
+  const opacity = useTransform(scrollYProgress, [0, 0.4], [0, 1]);
 
   const renderLink = () => {
     const linkAttrs = asLinkAttrs(link);
@@ -59,7 +60,7 @@ export function ExperienceProject({ name, description, link }: Props) {
   };
 
   return (
-    <motion.div ref={projectRef} style={{ y }}>
+    <motion.div ref={projectRef} style={{ y, opacity }}>
       <div className="mb-4 md:mb-6">
         <Title component="h6" size={5}>
           {name}
