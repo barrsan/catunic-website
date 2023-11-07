@@ -30,6 +30,15 @@ function RootNav({ data, isErrorPage = false }: Props) {
       [
         animationScope.current,
         {
+          opacity: 1,
+        },
+        {
+          duration: 0,
+        },
+      ],
+      [
+        animationScope.current,
+        {
           scaleX: [0, 1],
         },
         {
@@ -61,7 +70,7 @@ function RootNav({ data, isErrorPage = false }: Props) {
         className={clsx([
           'mx-auto -mt-15 h-navigation max-w-fit',
           'rounded-main bg-black bg-opacity-30',
-          'overflow-hidden',
+          'overflow-hidden opacity-0',
           'backdrop-blur-md',
           'backdrop-saturate-200',
           'shadow-as-border shadow-ds-grey-700',
