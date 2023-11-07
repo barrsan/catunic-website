@@ -5,7 +5,7 @@ export const SPRING_TRANSITION = {
   stiffness: 300,
   damping: 20,
   mass: 1,
-};
+} as const;
 
 export const cubicBezierEasing = {
   MAIN: cubicBezier(0.85, 0, 0.15, 1),
