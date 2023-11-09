@@ -28,6 +28,7 @@ jobs:
           mv out/500/index.html out/500.html
         env:
           SITE_URL: ${{ vars.SITE_URL  }}
+          NEXT_PUBLIC_YM_ID: ${{ vars.NEXT_PUBLIC_YM_ID  }}
       
       - name: Deploy project 🚀
         uses: JamesIves/github-pages-deploy-action@v4
