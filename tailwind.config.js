@@ -141,11 +141,11 @@ module.exports = {
       keyframes: {
         'wave-call-me': {
           '0%': { transform: 'rotate(0)' },
-          '2%': { transform: 'rotate(14deg)' },
-          '26%': { transform: 'rotate(-8deg)' },
+          '10%': { transform: 'rotate(14deg)' },
+          '30%': { transform: 'rotate(-8deg)' },
           '50%': { transform: 'rotate(14deg)' },
-          '74%': { transform: 'rotate(-4deg)' },
-          '98%': { transform: 'rotate(10deg)' },
+          '70%': { transform: 'rotate(-4deg)' },
+          '90%': { transform: 'rotate(10deg)' },
           '100%': { transform: 'rotate(0)' },
         },
         wave: {
