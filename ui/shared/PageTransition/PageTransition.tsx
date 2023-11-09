@@ -23,13 +23,15 @@ type Props = PropsWithChildren<{
 
 const DURATION_SECONDS = 1;
 const DISABLE_FIXED_DURATION_SECONDS = 0.1;
+const PAGE_TRANSITION_DELAY_SECONDS = 0.2;
 
-const CONTENT_DURATION_SECONDS = 0.5;
+const CONTENT_DURATION_SECONDS = 0.4;
 const CONTENT_DELAY_SECONDS = 0.3;
 
 const transition = {
   duration: DURATION_SECONDS,
   ease: cubicBezierEasing.MAIN,
+  delay: PAGE_TRANSITION_DELAY_SECONDS,
 };
 
 const contentTransition = {
