@@ -74,7 +74,7 @@ export function HeroTitle({ containerRef }: Props) {
       ],
     ];
 
-    animate(sequence, { delay: 1 });
+    animate(sequence, { delay: 2 });
   }, [animate, isInit]);
 
   const opacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
