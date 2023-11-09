@@ -95,6 +95,8 @@ module.exports = {
         navigation: '3.625rem',
         'page-top': '83em',
         'page-top-icon': 'clamp(1.5rem, 0.86rem + 3.21vw, 3.75rem)',
+        'screen-1/2': '50vh',
+        'screen-1.4x': '140vh',
         'screen-2x': '200vh',
       },
       margin: {

@@ -36,7 +36,11 @@ export function HeroCard({
     offsetEnd: 'bottom bottom',
   });
 
-  const rotateY = useTransform(scrollYProgress, [0.3, 0.8], ['0deg', '180deg']);
+  const rotateY = useTransform(
+    scrollYProgress,
+    [0.25, 0.6],
+    ['0deg', '180deg'],
+  );
 
   const handleFrontImageLoadingComplete = useCallback(() => {
     setIsFrontImageLoaded(true);

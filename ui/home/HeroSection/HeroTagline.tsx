@@ -8,9 +8,10 @@ import { Title } from '@/ui/shared/Title';
 
 type Props = {
   text: ReactNode[] | ReactNode | string;
+  isLast?: boolean;
 };
 
-export function HeroTagline({ text }: Props) {
+export function HeroTagline({ text, isLast = false }: Props) {
   const taglineRef = useRef(null);
   const { scrollYProgress } = useScrollProxy({
     target: taglineRef,
@@ -23,8 +24,8 @@ export function HeroTagline({ text }: Props) {
   return (
     <div
       className={clsx([
-        'h-screen min-h-screen-2/3 md:min-h-screen-4/5',
         'flex h-full flex-col justify-center',
+        isLast ? 'h-[160em] md:h-[74em]' : 'md:h-screen-1.4x h-screen',
       ])}
     >
       <motion.div

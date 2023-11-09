@@ -99,7 +99,7 @@ export function HeroSection({ frontSideImage, backSideImage }: Props) {
         </div>
         <div
           className={clsx([
-            'h-screen-2x',
+            'h-screen-1/2',
             'col-span-4 col-start-1 row-span-1 row-start-3',
           ])}
         />
@@ -119,7 +119,7 @@ export function HeroSection({ frontSideImage, backSideImage }: Props) {
             'mix-blend-difference',
           ])}
         >
-          <HeroTagline text={t.rich('tagline.cure')} />
+          <HeroTagline text={t.rich('tagline.cure')} isLast />
         </div>
       </div>
       <div className="h-24" />
