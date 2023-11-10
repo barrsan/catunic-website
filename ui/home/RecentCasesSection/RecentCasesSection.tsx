@@ -140,7 +140,7 @@ function RecentCasesSection({ spacingY, title, description, cases }: Props) {
             </motion.div>
           </div>
           <Button
-            className="relative z-10 bg-white"
+            className="min-w-60 relative z-10 bg-white"
             mode="link"
             href="/work"
             hasArrowIcon

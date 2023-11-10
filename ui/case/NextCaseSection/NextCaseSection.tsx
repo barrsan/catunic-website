@@ -20,7 +20,7 @@ type Props = NextCase;
 
 const previewMotionVariants = {
   animate: (custom: boolean) => ({
-    clipPath: custom ? 'circle(50% at center)' : 'circle(30% at center)',
+    clipPath: custom ? 'circle(48.6% at center)' : 'circle(30% at center)',
     transition: SPRING_TRANSITION,
   }),
 };
@@ -106,7 +106,7 @@ export function NextCaseSection({ name, coverImage, url }: Props) {
           </div>
         </Link>
         <Button
-          className="relative z-10 bg-white"
+          className="min-w-60 relative z-10 bg-white "
           mode="link"
           href="/work"
           hasArrowIcon
