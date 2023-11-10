@@ -2,4 +2,4 @@
 
 The personal website of digital designer Catrina Baretskaya a.k.a. Catunic.
 
-### 🏠 [Homepage](https://catunic.github.io/)
+### 🏠 [Homepage](https://catunic.art/)
