@@ -69,6 +69,11 @@ export function WorksGalleryColumn({ galleryRef, items, columnIndex }: Props) {
               className="h-full w-full object-cover"
               field={shot.image}
               loading="eager"
+              imgixParams={{
+                auto: ['compress', 'format'],
+                q: 60,
+                cs: 'strip',
+              }}
             />
           </div>
         ))}

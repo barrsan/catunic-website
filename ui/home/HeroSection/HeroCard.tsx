@@ -77,6 +77,11 @@ export function HeroCard({
           field={frontSideImage}
           loading="eager"
           onLoadingComplete={handleFrontImageLoadingComplete}
+          imgixParams={{
+            auto: ['compress', 'format'],
+            q: 60,
+            cs: 'strip',
+          }}
         />
       </div>
       <div className="absolute h-full w-full overflow-hidden rounded-main">
