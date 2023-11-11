@@ -127,7 +127,9 @@ export function CommonImage({
           fallbackAlt=""
           loading={isLazy ? 'lazy' : 'eager'}
           imgixParams={{
-            auto: ['format'],
+            auto: ['compress', 'format'],
+            q: 60,
+            cs: 'strip',
           }}
           onLoad={handleOnLoad}
         />
