@@ -17,8 +17,8 @@
           "config": {
             "label": "Front-side image",
             "constraint": {
-              "width": 1620,
-              "height": 1820
+              "width": 1024,
+              "height": 1338
             },
             "thumbnails": []
           }
