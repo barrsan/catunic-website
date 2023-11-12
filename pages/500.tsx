@@ -32,7 +32,7 @@ function ServerErrorPage(
 
   return (
     <PageContextProvider>
-      <PageTransition pageKey={pageKey} ref={ref}>
+      <PageTransition pageKey={pageKey} ref={ref} isContentFadeIn={false}>
         <Seo title="500" />
         <ErrorLayout pageKey={pageKey}>
           <PageError

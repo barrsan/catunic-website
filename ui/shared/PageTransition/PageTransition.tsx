@@ -20,6 +20,7 @@ import { Timeout } from '@/types';
 
 type Props = PropsWithChildren<{
   pageKey: string;
+  isContentFadeIn?: boolean;
 }>;
 
 const DURATION_SECONDS = 1;
@@ -60,7 +61,7 @@ const overlayMotionVariants = {
 };
 
 function PageTransition(
-  { pageKey, children }: Props,
+  { pageKey, isContentFadeIn = true, children }: Props,
   ref: ForwardedRef<HTMLDivElement>,
 ) {
   const [isFixed, setFixed] = useState(true);
@@ -176,7 +177,7 @@ function PageTransition(
           variants={contentMotionVariants}
           initial="initial"
           animate="animate"
-          custom={isPageReady}
+          custom={isPageReady || !isContentFadeIn}
         >
           {children}
         </motion.div>
