@@ -2,6 +2,7 @@ import { useMemo } from 'react';
 import { Content } from '@prismicio/client';
 import { SliceComponentProps } from '@prismicio/react';
 
+import { useReadySlice } from '@/lib/hooks/useReadySlice';
 import { getRelatedDocument } from '@/lib/prismicio/getRelatedDocument';
 
 import { RecentCasesSection } from '@/ui/home/RecentCasesSection';
@@ -18,6 +19,8 @@ export type RecentCasesBlockProps =
  * Component for "RecentCasesBlock" Slices.
  */
 function RecentCasesBlock({ slice }: RecentCasesBlockProps): JSX.Element {
+  useReadySlice();
+
   const cases = useMemo<PreviewCase[]>(
     () =>
       slice.items.map((item) => {

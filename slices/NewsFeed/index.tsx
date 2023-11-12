@@ -3,6 +3,7 @@ import { NewsFeedDocumentData, NewsPostDocumentData } from '@/prismicio-types';
 import { Content } from '@prismicio/client';
 import { SliceComponentProps } from '@prismicio/react';
 
+import { useReadySlice } from '@/lib/hooks/useReadySlice';
 import { getRelatedDocument } from '@/lib/prismicio/getRelatedDocument';
 
 import { ContainerSize } from '@/ui/shared/Container';
@@ -23,6 +24,8 @@ export type NewsFeedBlockProps = SliceComponentProps<
  * Component for "NewsFeedBlock" Slices.
  */
 function NewsFeedBlock({ slice, context }: NewsFeedBlockProps): JSX.Element {
+  useReadySlice();
+
   const newsFeed = useMemo<NewsFeedPost[]>(() => {
     const result: NewsFeedPost[] = [];
 

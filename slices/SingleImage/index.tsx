@@ -1,6 +1,8 @@
 import { Content } from '@prismicio/client';
 import { SliceComponentProps } from '@prismicio/react';
 
+import { useReadySlice } from '@/lib/hooks/useReadySlice';
+
 import { SingleImageSection } from '@/ui/shared/SingleImageSection';
 
 /**
@@ -13,6 +15,8 @@ export type SingleImageBlockProps =
  * Component for "SingleImageBlock" Slices.
  */
 function SingleImageBlock({ slice }: SingleImageBlockProps): JSX.Element {
+  useReadySlice();
+
   return (
     <SingleImageSection
       spacingTop={slice.primary.spacingTop}

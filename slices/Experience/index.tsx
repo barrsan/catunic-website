@@ -1,6 +1,8 @@
 import { Content } from '@prismicio/client';
 import { SliceComponentProps } from '@prismicio/react';
 
+import { useReadySlice } from '@/lib/hooks/useReadySlice';
+
 import { ExperienceSection } from '@/ui/about/ExperienceSection';
 
 /**
@@ -13,6 +15,8 @@ export type ExperienceBlockProps =
  * Component for "ExperienceBlock" Slices.
  */
 function ExperienceBlock({ slice }: ExperienceBlockProps): JSX.Element {
+  useReadySlice();
+
   return (
     <ExperienceSection
       spacingTop={slice.primary.spacingTop}

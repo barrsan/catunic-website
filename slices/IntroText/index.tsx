@@ -1,6 +1,8 @@
 import { Content } from '@prismicio/client';
 import { SliceComponentProps } from '@prismicio/react';
 
+import { useReadySlice } from '@/lib/hooks/useReadySlice';
+
 import { IntroTextSection } from '@/ui/shared/IntroTextSection';
 import { TitleSize } from '@/ui/shared/Title';
 
@@ -14,6 +16,8 @@ export type IntroTextBlockProps =
  * Component for "IntroTextBlock" Slices.
  */
 function IntroTextBlock({ slice }: IntroTextBlockProps): JSX.Element {
+  useReadySlice();
+
   return (
     <IntroTextSection
       spacingTop={slice.primary.spacingTop}

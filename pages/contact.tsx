@@ -43,6 +43,7 @@ function ContactPage(
           footerData={footerData}
           socialLinks={socialLinks}
           contactEmail={contactEmail}
+          sectionsCount={pageData.slices.length}
         >
           <SliceZone
             slices={pageData.slices}

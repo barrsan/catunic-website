@@ -1,6 +1,8 @@
 import { Content } from '@prismicio/client';
 import { SliceComponentProps } from '@prismicio/react';
 
+import { useReadySlice } from '@/lib/hooks/useReadySlice';
+
 import { CasePageTopSection } from '@/ui/case/CasePageTopSection';
 
 /**
@@ -13,6 +15,8 @@ export type CasePageTopBlockProps =
  * Component for "CasePageTopBlock" Slices.
  */
 function CasePageTopBlock({ slice }: CasePageTopBlockProps): JSX.Element {
+  useReadySlice();
+
   return (
     <CasePageTopSection
       title={slice.primary.title as string}

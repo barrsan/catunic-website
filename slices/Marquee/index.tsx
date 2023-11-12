@@ -2,6 +2,7 @@ import { Content } from '@prismicio/client';
 import { SliceComponentProps } from '@prismicio/react';
 
 import { createMarqueeList } from '@/lib/dataProcessing/createMarqueeList';
+import { useReadySlice } from '@/lib/hooks/useReadySlice';
 
 import { MarqueeSection } from '@/ui/shared/MarqueeSection';
 
@@ -14,6 +15,8 @@ export type MarqueeBlockProps = SliceComponentProps<Content.MarqueeBlockSlice>;
  * Component for "MarqueeBlock" Slices.
  */
 function MarqueeBlock({ slice }: MarqueeBlockProps): JSX.Element {
+  useReadySlice();
+
   const items = createMarqueeList(slice.items);
 
   return (

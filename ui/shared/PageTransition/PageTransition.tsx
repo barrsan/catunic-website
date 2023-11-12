@@ -11,6 +11,7 @@ import { motion, usePresence } from 'framer-motion';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import { useSsr } from 'usehooks-ts';
 
+import { usePageContext } from '@/context/page';
 import { usePageTransition } from '@/store/pageTransition';
 
 import { cubicBezierEasing } from '@/constants';
@@ -23,20 +24,16 @@ type Props = PropsWithChildren<{
 
 const DURATION_SECONDS = 1;
 const DISABLE_FIXED_DURATION_SECONDS = 0.1;
-const PAGE_TRANSITION_DELAY_SECONDS = 0.2;
 
 const CONTENT_DURATION_SECONDS = 0.4;
-const CONTENT_DELAY_SECONDS = 0.3;
 
 const transition = {
   duration: DURATION_SECONDS,
   ease: cubicBezierEasing.MAIN,
-  delay: PAGE_TRANSITION_DELAY_SECONDS,
 };
 
 const contentTransition = {
   duration: CONTENT_DURATION_SECONDS,
-  delay: CONTENT_DELAY_SECONDS,
 };
 
 const rootMotionVariants = {
@@ -51,10 +48,10 @@ const contentWrapperMotionVariants = {
 
 const contentMotionVariants = {
   initial: { opacity: 0 },
-  animate: {
-    opacity: 1,
+  animate: (custom: boolean) => ({
+    opacity: custom ? 1 : 0,
     transition: contentTransition,
-  },
+  }),
 };
 
 const overlayMotionVariants = {
@@ -81,6 +78,8 @@ function PageTransition(
   const [isPresence, safeToRemove] = usePresence();
 
   const router = useRouter();
+
+  const { isPageReady } = usePageContext();
 
   useEffect(() => {
     const handleChangeStart = () => {
@@ -177,6 +176,7 @@ function PageTransition(
           variants={contentMotionVariants}
           initial="initial"
           animate="animate"
+          custom={isPageReady}
         >
           {children}
         </motion.div>

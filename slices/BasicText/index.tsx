@@ -1,6 +1,8 @@
 import { Content } from '@prismicio/client';
 import { SliceComponentProps } from '@prismicio/react';
 
+import { useReadySlice } from '@/lib/hooks/useReadySlice';
+
 import { BasicTextSection } from '@/ui/shared/BasicTextSection';
 
 /**
@@ -13,6 +15,8 @@ export type BasicTextBlockProps =
  * Component for "BasicTextBlock" Slices.
  */
 function BasicTextBlock({ slice }: BasicTextBlockProps): JSX.Element {
+  useReadySlice();
+
   return (
     <BasicTextSection
       spacingTop={slice.primary.spacingTop}

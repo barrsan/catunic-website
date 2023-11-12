@@ -3,6 +3,8 @@ import { Content } from '@prismicio/client';
 import { SliceComponentProps } from '@prismicio/react';
 import { v4 as uuidv4 } from 'uuid';
 
+import { useReadySlice } from '@/lib/hooks/useReadySlice';
+
 import {
   GridImage,
   GridSize,
@@ -19,6 +21,8 @@ export type ImageGridBlockProps =
  * Component for "ImageGridBlock" Slices.
  */
 function ImageGridBlock({ slice }: ImageGridBlockProps): JSX.Element {
+  useReadySlice();
+
   const itemsWithId = useMemo<GridImage[]>(
     () =>
       slice.items.map((item) => ({

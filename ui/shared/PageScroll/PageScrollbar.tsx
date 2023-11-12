@@ -38,6 +38,8 @@ export function PageScrollbar({ pageKey }: Props) {
   const thumbRef = useRef<HTMLDivElement>(null);
   const isThumbClickedRef = useRef<boolean>(false);
 
+  const { isPageReady } = usePageContext();
+
   useEffect(() => {
     smoothScrollInstance[pageKey]?.on(
       'scroll',
@@ -66,7 +68,7 @@ export function PageScrollbar({ pageKey }: Props) {
     const hThumb = Math.round(h);
 
     setHeight(THUMB_MIN_HEIGHT_PX > hThumb ? THUMB_MIN_HEIGHT_PX : hThumb);
-  }, [smoothScrollContent, scrollViewport]);
+  }, [smoothScrollContent, scrollViewport, isPageReady]);
 
   const handlePointerUp = () => {
     isThumbClickedRef.current = false;
