@@ -23,7 +23,7 @@ export function MainLayout({
 
   return (
     <PageScroll pageKey={pageKey}>
-      <main>{children}</main>
+      <main className="min-h-screen w-full">{children}</main>
       <Footer
         ctaTextRows={ctaTextRows}
         ctaButtonText={footerData.ctaButtonText as string}
