@@ -24,8 +24,8 @@ export function HeroTagline({ text, isLast = false }: Props) {
   return (
     <div
       className={clsx([
-        'flex h-full flex-col justify-center',
-        isLast ? 'h-[160em] md:h-[74em]' : 'md:h-screen-1.4x h-screen',
+        'flex flex-col justify-center',
+        isLast ? 'h-[160em] md:h-[74em]' : 'h-screen md:h-screen-1.4x',
       ])}
     >
       <motion.div

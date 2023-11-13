@@ -19,7 +19,7 @@ export function PageContextProvider({ children }: Props) {
   );
 
   useEffect(() => {
-    if (sliceCount > 0 && sliceCount === readySliceCount) {
+    if (sliceCount > 0 && readySliceCount >= sliceCount) {
       setIsPageReady(true);
     }
   }, [readySliceCount, sliceCount]);
